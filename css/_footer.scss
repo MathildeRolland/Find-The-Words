@@ -1,0 +1,35 @@
+/* - - - - - - - - - -> FOOTER <- - - - - - - - - - */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: rgba(35, 27, 27, .2);
+
+    .footer__text span {
+        color: #736B92;
+        font-weight: 600;
+    }
+
+    .footer__list {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .footer__link {
+        padding: 0 .5em;
+    }
+
+    .footer__text, .footer__list {
+        margin: 0;
+        color: #231B1B;
+    }
+
+    .footer__link {
+        color: #231B1B;
+    }
+
+    .footer__link:hover {
+        color: #736B92;
+    }
+}
+
