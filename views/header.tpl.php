@@ -35,32 +35,3 @@
                 </ul>
             </nav>
         </header>
-
-<main class="main">
-    <div class="extract">
-        <p class="extract__category">Category</p>
-        <div class="extract__card">
-            <blockquote class="extract__content">
-                Extrait du livre
-            </blockquote>
-            <p class="extract__sources">Livre de Auteur</p>
-        </div>
-    </div>
-</main>
-
-<footer class="footer">
-            <p class="footer__text">Made By <span>MaD</span></p>
-            <div class="footer__medias">
-                <ul class="footer__list">
-                    <li class="footer__list-item"><a href="#" class="footer__link"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li class="footer__list-item"><a href="#" class="footer__link"></a><i class="fab fa-github"></i></a></li>
-                    <li class="footer__list-item"> <a href="#" class="footer__link"></a><i class="fab fa-codepen"></i></a></li>
-                </ul>
-            </div>
-        </footer>
-    </div>
-
-    <script src="https://kit.fontawesome.com/793c2f285b.js" crossorigin="anonymous"></script>
-</body>
-</html>
-
