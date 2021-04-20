@@ -1,0 +1,24 @@
+.buttons {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+
+    .buttons__btn {
+        margin : .5em 0;
+    }
+
+    .buttons__random, .buttons__themes {
+        font-size: .9em;
+        border: 1px solid #736b92;
+        border-radius: .2em;
+        padding: .2em .5em;
+    }
+
+    .buttons__generate {
+        font-size: 1.4em;
+        padding: .2em .5em;
+        background-color: #736b92;
+        border: none;
+        border-radius: .2em;
+    }
+}

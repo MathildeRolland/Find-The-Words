@@ -1,30 +1,35 @@
 .extract {
     padding: 1em;
+    display: flex;
+    flex-direction: column;
+
 
     .extract__category {
+        display: inline-block;
+        align-self: flex-end;
         text-align: center;
         padding: 0 .8em;
         background-color: #231B1B;
         color: #fff;
         font-weight: 300;
-        float: right;
     }
-    
+
     .extract__card {
-        border: 2px solid #231B1B;
+        overflow: hidden;
+        border-radius: .5em;
     }
 
     .extract__content {
-        clear: right;
         background-color: rgba(115, 107, 146, .3);
         margin: 0;
         padding: 1em;
     }
 
     .extract__sources {
-        text-align: right;
         margin: 0;
         background-color: #736B92;
+        padding: 0 1em;
+        text-align: right;
     }
 }
 

@@ -11,5 +11,6 @@
     </div>
 
     <script src="https://kit.fontawesome.com/793c2f285b.js" crossorigin="anonymous"></script>
+    <script src="/../js/app.js"></script>
 </body>
 </html>

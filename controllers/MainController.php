@@ -1,6 +1,7 @@
 <?php
 
 class MainController {
+
     public function home() {
         $this->show('home');
     }
@@ -10,4 +11,6 @@ class MainController {
         require __DIR__ . '/../views/' . $viewName . '.tpl.php';
         require __DIR__ . '/../views/footer.tpl.php';
     }
+
+
 }
