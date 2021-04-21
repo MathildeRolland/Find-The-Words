@@ -3,24 +3,25 @@
 ?>
 
 <main class="main">
-    <?php foreach($booksDatas as $id => $extract): ?>
+    <div class="counter__div">Total extracts: <span class="counter"><?= count($booksDatas); ?></span></div>
+
         <div class="extract">
-            <p class="extract__category"><?= $extract['category_name']; ?></p>
+            <p class="extract__category"><?= $booksDatas[$randomId]['category_name']; ?></p>
             <div class="extract__card">
                 <blockquote class="extract__content">
-                    <?= $extract['extract']; ?>
+                    <?= $booksDatas[$randomId]['extract']; ?>
                 </blockquote>
-                <p class="extract__sources"><?= $extract['book_title']; ?> from <?= $extract['author_name']; ?></p>
+                <p class="extract__sources"><?= $booksDatas[$randomId]['book_title']; ?> , <?= $booksDatas[$randomId]['author_name']; ?></p>
             </div>
         </div>
         <div class="buttons">
             <div class="buttons__states">
-                <button class="buttons__btn buttons__random">Random</button>
-                <button class="buttons__btn buttons__themes">Theme</button>
+                <button class="buttons__btn buttons__options buttons__random"><a href='#' class="buttons__link">Random</a></button>
+                <button class="buttons__btn buttons__options buttons__themes"><a href='#' class="buttons__link">Theme</a></button>
             </div>
-            <button class="buttons__btn buttons__generate" onclick="handleClick()">Generate</button>
+            <button class="buttons__btn buttons__generate">Generate</button>
         </div>
-    <?php endforeach; ?>
+
 </main>
 
 
