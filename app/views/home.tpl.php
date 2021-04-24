@@ -1,17 +1,15 @@
-<?php 
-    require __DIR__ . '/../db.php'; 
-?>
+
 
 <main class="main">
-    <div class="counter__div">Total extracts: <span class="counter"><?= count($booksDatas); ?></span></div>
+    <div class="counter__div">Total extracts: <span class="counter">Compteur</span></div>
 
         <div class="extract">
-            <p class="extract__category"><?= $booksDatas[$randomId]['category_name']; ?></p>
+            <p class="extract__category">Category</p>
             <div class="extract__card">
                 <blockquote class="extract__content">
-                    <?= $booksDatas[$randomId]['extract']; ?>
+                    Extrait
                 </blockquote>
-                <p class="extract__sources"><?= $booksDatas[$randomId]['book_title']; ?> , <?= $booksDatas[$randomId]['author_name']; ?></p>
+                <p class="extract__sources">Titre du livre, Auteur</p>
             </div>
         </div>
         <div class="buttons">

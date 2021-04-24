@@ -1,0 +1,8 @@
+; Fichier de configuration d'exemple
+; Il faut copier ce fichier, le renommer config.ini et le remplir avec nos informations de BDD personnelles.
+; Ce fichier sera utilisé par app/Utils/Database.php pour se connecter à la BDD
+
+DB_HOST=localhost
+DB_NAME=
+DB_USERNAME=
+DB_PASSWORD=
