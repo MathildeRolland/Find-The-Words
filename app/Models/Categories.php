@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Utils\Database;
 use PDO;
 
+
 class Categories extends CoreModel {
 
 
@@ -15,7 +16,7 @@ class Categories extends CoreModel {
 
         $pdoStatement = $pdo->query($sql);
 
-        $category = $pdoStatement->fetchObject('Categories');
+        $category = $pdoStatement->fetchObject(self::class);
 
         return $category;
     }
@@ -27,7 +28,7 @@ class Categories extends CoreModel {
 
         $pdoStatement = $pdo->query($sql);
 
-        $categories = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+        $categories = $pdoStatement->fetchAll(PDO::FETCH_CLASS, self::class);
 
         return $categories;
     }

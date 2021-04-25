@@ -8,6 +8,7 @@ use PDO;
 class Books {
 
     private $extract;
+    private $title;
     private $author_id;
     private $category_id;
 
@@ -18,7 +19,7 @@ class Books {
 
         $pdoStatement = $pdo->query($sql);
 
-        $book = $pdoStatement->fetchObject('Books');
+        $book = $pdoStatement->fetchObject(self::class);
 
         return $book;
     }
@@ -30,7 +31,7 @@ class Books {
 
         $pdoStatement = $pdo->query($sql);
 
-        $books = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+        $books = $pdoStatement->fetchAll(PDO::FETCH_CLASS, self::class);
 
         return $books;
     }
@@ -92,6 +93,26 @@ class Books {
     public function setCategory_id($category_id)
     {
         $this->category_id = $category_id;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of title
+     */ 
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set the value of title
+     *
+     * @return  self
+     */ 
+    public function setTitle($title)
+    {
+        $this->title = $title;
 
         return $this;
     }

@@ -52,7 +52,6 @@ if($match !== false) {
 
     // J'instancie un nouvel objet de la classe MainController, qui gèrera l'affichage de ma page
     $controller = new $controllerToUse();
-    dump($controller);
 
     $controller->$methodToUse($match['params']);
 } else {

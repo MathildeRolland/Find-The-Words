@@ -3,12 +3,12 @@
     <div class="counter__div">Total extracts: <span class="counter"><?= count($totalExtracts); ?></span></div>
 
         <div class="extract">
-            <p class="extract__category">Category</p>
+            <p class="extract__category"><?= $category->getName(); ?></p>
             <div class="extract__card">
                 <blockquote class="extract__content">
-                    Extrait
+                    <?= $extract->getExtract(); ?>
                 </blockquote>
-                <p class="extract__sources">Titre du livre, Auteur</p>
+                <p class="extract__sources"><?= $extract->getTitle(); ?>, <?= $author->getName(); ?></p>
             </div>
         </div>
         <div class="buttons">
@@ -20,6 +20,3 @@
         </div>
 
 </main>
-
-
-

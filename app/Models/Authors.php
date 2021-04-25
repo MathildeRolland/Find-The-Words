@@ -15,7 +15,7 @@ class Authors extends CoreModel {
 
         $pdoStatement = $pdo->query($sql);
 
-        $author = $pdoStatement->fetchObject('Authors');
+        $author = $pdoStatement->fetchObject(self::class);
 
         return $author;
     }
@@ -27,7 +27,7 @@ class Authors extends CoreModel {
 
         $pdoStatement = $pdo->query($sql);
 
-        $authors = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+        $authors = $pdoStatement->fetchAll(PDO::FETCH_CLASS, self::class);
 
         return $authors;
     }

@@ -30,5 +30,5 @@ foreach($rawDatas as $id => $extract) {
 }
 
 // Je récupère le le random Id généré en JS et passé dans l'URL 
-$randomId = filter_input(INPUT_GET, 'rdmNb');
+//$randomId = filter_input(INPUT_GET, 'rdmNb');
 
