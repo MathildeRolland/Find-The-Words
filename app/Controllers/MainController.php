@@ -26,7 +26,6 @@ class MainController {
 
         // Je crée un objet de la classe Catégories et récupère toute ses infos à partir de son ID
         $categoryId = $extract->getCategory_id(); 
-        dump($categoryId);
         $categoryModel = new Categories;
         $category = $categoryModel->find($categoryId);
 
