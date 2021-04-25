@@ -49,5 +49,22 @@ body {
 
 
 
+/* - - - - - - - - - -> Description <- - - - - - - - - - */
+
+.description {
+    width: 90%;
+
+    .description__content {
+        text-align: center;
+    }
+}
 
 
+
+/* - - - - - - - - - - > MEDIAS < - - - - - - - - - - */
+
+@media all and (min-width: 992px) {
+    body {
+        font-size: 18px;
+    }
+}

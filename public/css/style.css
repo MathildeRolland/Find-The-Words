@@ -13,7 +13,6 @@
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  background-color: #fff;
   padding: 0;
   margin: 0;
 }
@@ -31,7 +30,7 @@
   text-transform: uppercase;
 }
 .header .header__titles {
-  padding: 1em 0 0 0.5em;
+  padding: 1em 0 0 0.7em;
 }
 .header .header__first-title, .header .header__second-title {
   font-family: "Cormorant Garamond", serif;
@@ -64,7 +63,42 @@
   background-color: #fff;
 }
 
+/* - - - - - - - - - - > MEDIAS < - - - - - - - - - - */
+@media all and (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5em;
+  }
+  .header .header__nav {
+    display: block;
+    width: unset;
+  }
+  .header .header__list {
+    flex-direction: row;
+    align-items: center;
+  }
+  .header .header__list-item {
+    background-color: #231b1b;
+    width: 8em;
+  }
+  .header .header__link {
+    color: #fff;
+    padding: 0;
+  }
+}
+@media all and (min-width: 992px) {
+  .header {
+    padding: 0 1em;
+  }
+}
 .extract {
+  width: 90%;
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -96,6 +130,17 @@
   text-align: right;
 }
 
+/* - - - - - - - - - - > MEDIAS < - - - - - - - - - - */
+@media all and (min-width: 768px) {
+  .extract {
+    max-width: 800px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .extract {
+    max-width: 900px;
+  }
+}
 .buttons {
   width: 50%;
   text-align: center;
@@ -148,6 +193,7 @@
 .footer .footer__list {
   display: flex;
   list-style-type: none;
+  padding: 0;
 }
 .footer .footer__link {
   padding: 0 0.5em;
@@ -163,6 +209,7 @@
   color: #736B92;
 }
 
+/* - - - - - - - - - - > MEDIAS < - - - - - - - - - - */
 * {
   box-sizing: border-box;
 }
@@ -203,6 +250,21 @@ body {
   padding: 0.2em 0.5em;
   font-size: 0.8em;
   border: 1px solid #231b1b;
+}
+
+/* - - - - - - - - - -> Description <- - - - - - - - - - */
+.description {
+  width: 90%;
+}
+.description .description__content {
+  text-align: center;
+}
+
+/* - - - - - - - - - - > MEDIAS < - - - - - - - - - - */
+@media all and (min-width: 992px) {
+  body {
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

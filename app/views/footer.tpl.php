@@ -3,8 +3,8 @@
             <div class="footer__medias">
                 <ul class="footer__list">
                     <li class="footer__list-item"><a href="#" class="footer__link"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li class="footer__list-item"><a href="#" class="footer__link"></a><i class="fab fa-github"></i></a></li>
-                    <li class="footer__list-item"> <a href="#" class="footer__link"></a><i class="fab fa-codepen"></i></a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__link"><i class="fab fa-github"></i></a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__link"><i class="fab fa-codepen"></i></a></li>
                 </ul>
             </div>
         </footer>

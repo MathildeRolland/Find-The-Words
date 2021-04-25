@@ -1,3 +1,26 @@
+
+/**
+ * HANDLE BURGER MENU CLICK
+ */
+
+const burger = document.querySelector('.burger');
+burger.addEventListener("click", handleBurgerClick);
+
+function handleBurgerClick() {
+    const nav = document.querySelector('.header__nav');
+    if(nav.style.display !== "block") {
+        nav.style.display = "block";
+    } else {
+        nav.style.display = "none";
+    }
+}
+
+
+
+/**
+ * GENERATE RANDOM NUMBER AND PASS IT IN THE URL SO THAT PHP CAN USE IT
+ */
+
 const generateBtn = document.querySelector('.buttons__generate');
 generateBtn.addEventListener('click', handleClick);
 

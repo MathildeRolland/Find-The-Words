@@ -1,6 +1,6 @@
 
 <main class="main">
-    <div class="counter__div">Total extracts: <span class="counter"><?= count($totalExtracts); ?></span></div>
+    <div class="counter__div">Nombre d'extraits: <span class="counter"><?= count($totalExtracts); ?></span></div>
 
         <div class="extract">
             <p class="extract__category"><?= $category->getName(); ?></p>

@@ -1,15 +1,10 @@
 
 <main class="main">
-    <div class="counter__div">Total extracts: <span class="counter"><?= count($totalExtracts); ?></span></div>
+    <div class="counter__div">Nombre d'extraits: <span class="counter"><?= count($totalExtracts); ?></span></div>
 
-        <div class="extract">
-            <p class="extract__category">Category</p>
-            <div class="extract__card">
-                <blockquote class="extract__content">
-                    Extrait
-                </blockquote>
-                <p class="extract__sources">Titre du livre, Auteur</p>
-            </div>
+        <div class="description">
+            <p class="description__content">Bienvenue sur <strong>Find The Words</strong>, un outil qui génère des extraits inspirants de livres qu'on aime!</p>
+            <p class="description__content">Clique sur le bouton "Generate" pour trouver les mots qui toucheront ton âme...</p>
         </div>
         <div class="buttons">
             <div class="buttons__states">

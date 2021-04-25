@@ -1,4 +1,5 @@
 .extract {
+    width: 90%;
     padding: 1em;
     display: flex;
     flex-direction: column;
@@ -35,3 +36,17 @@
     }
 }
 
+
+/* - - - - - - - - - - > MEDIAS < - - - - - - - - - - */
+
+@media all and (min-width: 768px) {
+    .extract {
+        max-width: 800px;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .extract {
+        max-width: 900px;
+    }
+}
