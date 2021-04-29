@@ -29,7 +29,25 @@ class Authors extends CoreModel {
 
         $authors = $pdoStatement->fetchAll(PDO::FETCH_CLASS, self::class);
 
-        return $authors;
+        // Je crée un tableau qui remanie les données.
+        // Les clés sont maintenant les ids de chaque auteur
+        $sortedAuthors = [];
+        foreach($authors as $author) {
+            $sortedAuthors[$author->getId()] = $author;
+        }
+
+        return $sortedAuthors;
     }
 
+    public function findById($authorId) {
+        $pdo = Database::getPDO();
+
+        $sql = 'SELECT * FROM `authors` WHERE `id` =' . $authorId;
+
+        $pdoStatement = $pdo->query($sql);
+
+        $authors = $pdoStatement->fetchAll(PDO::FETCH_CLASS, self::class);
+
+        return $authors;
+    }
 }

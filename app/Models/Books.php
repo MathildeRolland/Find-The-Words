@@ -24,6 +24,18 @@ class Books {
         return $book;
     }
 
+    public function findByCategory($categoryId) {
+        $pdo = Database::getPDO();
+
+        $sql = 'SELECT * FROM `books` WHERE `category_id` = ' . $categoryId;
+
+        $pdoStatement = $pdo->query($sql);
+
+        $books = $pdoStatement->fetchAll(PDO::FETCH_CLASS, self::class);
+
+        return $books;
+    }
+
     public function findAll() {
         $pdo = Database::getPDO();
 

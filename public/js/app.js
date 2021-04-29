@@ -1,4 +1,3 @@
-
 /**
  * HANDLE BURGER MENU CLICK
  */
@@ -21,8 +20,12 @@ function handleBurgerClick() {
  * GENERATE RANDOM NUMBER AND PASS IT IN THE URL SO THAT PHP CAN USE IT
  */
 
-const generateBtn = document.querySelector('.buttons__generate');
-generateBtn.addEventListener('click', handleClick);
+const generateBtn = document.querySelector('.generate');
+
+if(generateBtn !== null) {
+    generateBtn.addEventListener("click", handleClick);
+}
+
 
 function handleClick() {
     // I retrieve the number of extracts via the counter
@@ -33,5 +36,22 @@ function handleClick() {
 
     // I send it via the URL so that PHP can use it
     window.location.href = randomId;
+    
 }
 
+
+
+
+
+/**
+ * HANDLE SELECT CHANGE
+ */
+
+const select = document.querySelector('#themes');
+select.addEventListener("change", handleSelectChange);
+
+function handleSelectChange() {
+    let optionChosen = select.value;
+    window.location.href = optionChosen;
+    let url = window.location.href;
+}

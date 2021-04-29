@@ -2,11 +2,12 @@
 
 namespace App\Controllers;
 
+use App\Controllers\CoreController;
 use App\Models\Books;
 use App\Models\Categories;
 use App\Models\Authors;
 
-class MainController {
+class MainController extends CoreController {
 
 
     public function home() {
@@ -35,24 +36,17 @@ class MainController {
         $author = $authorModel->find($authorId);
 
         // J'ajoute $extract, $category et $author afin de pouvoir utiliser toutes leurs infos dans mon template
-        $this->show('random', $viewVars = [
+        $this->show('random', [
             'extract' => $extract,
-            'category' => $category,
-            'author' => $author
+            'categorie' => $category,
+            'author' => $author,
+            'randomNumber' => $randomNumber
         ]);
     }
 
-    public function show($viewName, $viewVars = []) {
 
-        // J'instancie la classe Books et récupère tous les extraits grâce à sa fonction findAll()
-        $bookModel = new Books;
-        $totalExtracts = $bookModel->findAll();
-
-        extract($viewVars);
-
-        require __DIR__ . '/../views/header.tpl.php';
-        require __DIR__ . '/../views/' . $viewName . '.tpl.php';
-        require __DIR__ . '/../views/footer.tpl.php';
+    public function addExtract() {
+        $this->show('add-extract');
     }
 
 }

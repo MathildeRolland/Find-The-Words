@@ -39,6 +39,26 @@ $router->map(
     'randomNumber'
 );
 
+$router->map(
+    'GET', 
+    '/[a:action]',
+    [
+        'controller' => 'ListController',
+        'method' => 'list'
+    ],
+    'listByTheme'
+);
+
+$router->map(
+    'GET', 
+    '/add',
+    [
+        'controller' => 'MainController',
+        'method' => 'addExtract'
+    ],
+    'addExtract'
+);
+
 $match = $router->match();
 
 if($match !== false) {

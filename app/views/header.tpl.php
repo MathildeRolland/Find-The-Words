@@ -19,7 +19,7 @@
 
         <header class="header">
             <div class="header__titles">
-                <h1 class="header__first-title">Find the words</h1>
+                <h1 class="header__first-title"><a href="<?= $router->generate('home'); ?>">Find the words</a></h1>
                 <h2 class="header__second-title">(A words from books generator)</h2>
             </div>
 
@@ -30,8 +30,17 @@
             </div>
             <nav class="header__nav">
                 <ul class="header__list">
-                    <li class="header__list-item"><a href="#" class="header__link">Copy</a></li>
-                    <li class="header__list-item"><a href="#" class="header__link">Add</a></li>
+                    <li class="header__list-item">
+                        <form>
+                            <select name="themes" id="themes">
+                            <option value="">Thèmes</option>
+                                <?php foreach($categories as $category): ?>
+                                    <option value="<?= $category->getOption_selected(); ?>"><?= $category->getName(); ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </form>
+                    </li>
+                    <li class="header__list-item"><a href="<?= $router->generate('addExtract'); ?>" class="header__link">Add</a></li>
                     <li class="header__list-item"><a href="#" class="header__link">Dark Mode</a></li>
                 </ul>
             </nav>
