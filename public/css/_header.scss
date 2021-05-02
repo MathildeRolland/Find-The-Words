@@ -4,6 +4,8 @@
     flex-direction: column;
     background-color: #231B1B;
     color: #fff;
+    margin-bottom: 1.5em;
+    position: relative; // To position the counter-div as absolute
 
     .header__nav {
         width: 100%;
@@ -29,7 +31,7 @@
         display: block;
         padding: .5em 0;
         text-decoration: none;
-        color: #231B1B;
+        color: #fff;
         text-transform: uppercase;
     }
 
@@ -53,6 +55,20 @@
         font-weight: 400;
         margin-top: 0;
     }
+
+    .header__title-link {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .header__select {
+        font-family: 'Cormorant Garamond', serif;
+        background-color: rgba(35, 27, 27, 1);
+        color: #fff;
+        font-size: 1em;
+        border: none;
+        text-align-last: center;
+    }
 }
 
 .burger {
@@ -71,6 +87,20 @@
         background-color: #fff;
     }
 }
+
+/* - - - - - - - - - -> Extracts counter <- - - - - - - - - - */
+.counter__div {
+    display: inline-block;
+    height: 2em;
+    position: absolute;
+    right: 0;
+    bottom: -2em;
+    padding: .2em .5em;
+    font-size: .8em;
+    border: 1px solid #231b1b;
+    color: #231B1B;
+}
+
 
 
 

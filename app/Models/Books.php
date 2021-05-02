@@ -48,6 +48,29 @@ class Books {
         return $books;
     }
 
+    // Fonction qui créera une nouvelle ligne dans la table books de la BDD
+    public function create() {
+        $pdo = Database::getPDO();
+        
+        // Requête sql
+        $sql="
+            INSERT INTO `books` (extract, title, author_id, category_id)
+            VALUES ('{$this->extract}', '{$this->title}', '{$this->author_id}', '{$this->category_id}')
+        ";
+
+        // J'exécute cette requête
+        $insertedRows = $pdo->exec($sql);
+
+        // Si au moins une ligne est insérée, son id sera égal au dernier id inséré (auto-incrémentation)
+        if($insertedRows > 0) {
+            $this->id = $pdo->lastInsertId();
+
+            return true;
+        }
+
+        return false;
+
+    }
 
     /**
      * Get the value of extract

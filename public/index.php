@@ -26,7 +26,7 @@ $router->map(
         'controller' => 'MainController',
         'method' => 'home'
     ],
-    'home'
+    'main-home'
 );
 
 $router->map(
@@ -36,17 +36,7 @@ $router->map(
         'controller' => 'MainController',
         'method' => 'random'
     ],
-    'randomNumber'
-);
-
-$router->map(
-    'GET', 
-    '/[a:action]',
-    [
-        'controller' => 'ListController',
-        'method' => 'list'
-    ],
-    'listByTheme'
+    'main-random'
 );
 
 $router->map(
@@ -56,8 +46,30 @@ $router->map(
         'controller' => 'MainController',
         'method' => 'addExtract'
     ],
-    'addExtract'
+    'main-addExtract'
 );
+
+$router->map(
+    'POST', 
+    '/add',
+    [
+        'controller' => 'MainController',
+        'method' => 'add'
+    ],
+    'main-add'
+);
+
+$router->map(
+    'GET', 
+    '/[a:action]',
+    [
+        'controller' => 'ListController',
+        'method' => 'list'
+    ],
+    'list-list'
+);
+
+
 
 $match = $router->match();
 

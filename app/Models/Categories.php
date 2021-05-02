@@ -10,6 +10,7 @@ class Categories extends CoreModel {
 
     private $option_selected;
     
+    // Fonction trouvant une catégorie à partir de son id
     public function find($categoryId) {
         $pdo = Database::getPDO();
 
@@ -22,6 +23,7 @@ class Categories extends CoreModel {
         return $category;
     }
 
+    // Fonction trouvant une catégorie à partir de son option
     public function findByOption($themeSelected) {
         $pdo = Database::getPDO();
 

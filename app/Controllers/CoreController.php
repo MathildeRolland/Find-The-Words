@@ -9,10 +9,6 @@ class CoreController {
     public function show($viewName, $viewVars = []) {
 
         global $router;
-        
-        // J'instancie la classe Books et récupère tous les extraits grâce à sa fonction findAll()
-        $bookModel = new Books;
-        $totalExtracts = $bookModel->findAll();
 
         // J'instancie la classe Categories et les récupère toutes
         $categoryModel = new Categories();

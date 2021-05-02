@@ -20,6 +20,19 @@ class Authors extends CoreModel {
         return $author;
     }
 
+    public function findByName($authorName) {
+        $pdo = Database::getPDO();
+
+        $sql = "SELECT * FROM `authors` WHERE `name` = '{$authorName}'";
+
+        $pdoStatement = $pdo->query($sql);
+
+        $author = $pdoStatement->fetchObject(self::class);
+
+        return $author;
+    }
+
+
     public function findAll() {
         $pdo = Database::getPDO();
 
@@ -39,15 +52,26 @@ class Authors extends CoreModel {
         return $sortedAuthors;
     }
 
-    public function findById($authorId) {
+    public function create() {
         $pdo = Database::getPDO();
+        
+        // Requête sql
+        $sql="
+            INSERT INTO `authors` (name)
+            VALUES ('{$this->name}')
+        ";
 
-        $sql = 'SELECT * FROM `authors` WHERE `id` =' . $authorId;
+        // J'exécute cette requête
+        $insertedRows = $pdo->exec($sql);
 
-        $pdoStatement = $pdo->query($sql);
+        // Si au moins une ligne est insérée, son id sera égal au dernier id inséré (auto-incrémentation)
+        if($insertedRows > 0) {
+            $this->id = $pdo->lastInsertId();
 
-        $authors = $pdoStatement->fetchAll(PDO::FETCH_CLASS, self::class);
+            return true;
+        }
 
-        return $authors;
+        return false;
+
     }
 }

@@ -25,7 +25,7 @@ class ListController extends CoreController {
         $authors = $authorModel->findAll();
 
         $this->show('list', [
-            'books' => $books,
+            'totalExtracts' => $books,
             'categorie' => $category,
             'authors' => $authors
         ]);

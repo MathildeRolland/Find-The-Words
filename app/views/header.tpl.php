@@ -19,7 +19,7 @@
 
         <header class="header">
             <div class="header__titles">
-                <h1 class="header__first-title"><a href="<?= $router->generate('home'); ?>">Find the words</a></h1>
+                <h1 class="header__first-title"><a class="header__title-link" href="<?= $router->generate('main-home'); ?>">Find the words</a></h1>
                 <h2 class="header__second-title">(A words from books generator)</h2>
             </div>
 
@@ -31,17 +31,17 @@
             <nav class="header__nav">
                 <ul class="header__list">
                     <li class="header__list-item">
-                        <form>
-                            <select name="themes" id="themes">
-                            <option value="">Thèmes</option>
+                        <form class="header__form">
+                            <select name="themes" id="themes" class="header__select">
+                            <option value="">THEMES</option>
                                 <?php foreach($categories as $category): ?>
                                     <option value="<?= $category->getOption_selected(); ?>"><?= $category->getName(); ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </form>
                     </li>
-                    <li class="header__list-item"><a href="<?= $router->generate('addExtract'); ?>" class="header__link">Add</a></li>
-                    <li class="header__list-item"><a href="#" class="header__link">Dark Mode</a></li>
+                    <li class="header__list-item"><a href="<?= $router->generate('main-addExtract'); ?>" class="header__link">Add</a></li>
                 </ul>
             </nav>
+            <div class="counter__div">Nombre d'extraits: <span class="counter"><?= count($totalExtracts); ?></span></div>
         </header>

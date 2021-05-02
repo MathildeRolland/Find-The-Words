@@ -1,9 +1,8 @@
 
 <main class="main">
-    <div class="counter__div">Nombre d'extraits: <span class="counter"><?= count($books); ?></span></div>
 
     <h2><?= $categorie->getName(); ?></h2>
-        <?php foreach($books as $book): ?>
+        <?php foreach($totalExtracts as $book): ?>
         <?php $currentAuthor = $authors[$book->getAuthor_id()]; ?>
             <div class="extract">
                 <div class="extract__card">

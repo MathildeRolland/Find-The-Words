@@ -4,8 +4,6 @@
   flex-direction: column;
   background-color: #231B1B;
   color: #fff;
-  margin-bottom: 1.5em;
-  position: relative;
 }
 .header .header__nav {
   width: 100%;
@@ -28,7 +26,7 @@
   display: block;
   padding: 0.5em 0;
   text-decoration: none;
-  color: #fff;
+  color: #231B1B;
   text-transform: uppercase;
 }
 .header .header__titles {
@@ -77,19 +75,6 @@
   background-color: #fff;
 }
 
-/* - - - - - - - - - -> Extracts counter <- - - - - - - - - - */
-.counter__div {
-  display: inline-block;
-  height: 2em;
-  position: absolute;
-  right: 0;
-  bottom: -2em;
-  padding: 0.2em 0.5em;
-  font-size: 0.8em;
-  border: 1px solid #231b1b;
-  color: #231B1B;
-}
-
 /* - - - - - - - - - - > MEDIAS < - - - - - - - - - - */
 @media all and (min-width: 768px) {
   .burger {
@@ -127,7 +112,6 @@
 .extract {
   width: 90%;
   padding: 1em;
-  margin: 0.7em 0;
   display: flex;
   flex-direction: column;
 }
@@ -207,67 +191,12 @@
   transition: transform 0.2s;
 }
 
-.new-extract {
-  width: 90%;
-}
-.new-extract .new-extract__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.new-extract .new-extract__div {
-  text-align: center;
-  width: 100%;
-  margin: 0.5em 0;
-}
-.new-extract .new-extract__input {
-  width: 100%;
-}
-.new-extract .header__select {
-  align-self: center;
-}
-.new-extract .submit {
-  margin: 0.5em 0;
-}
-
-@media all and (min-width: 578px) {
-  .new-extract {
-    width: 70%;
-  }
-}
-@media all and (min-width: 768px) {
-  .new-extract {
-    width: 50%;
-  }
-}
-@media all and (min-width: 992px) {
-  .new-extract {
-    width: 70%;
-  }
-  .new-extract .new-extract__wrapper {
-    width: 80%;
-  }
-  .new-extract .new-extract__div {
-    display: flex;
-    justify-content: flex-end;
-  }
-  .new-extract .new-extract__input {
-    width: 70%;
-  }
-  .new-extract .header__select {
-    align-self: flex-end;
-  }
-  .new-extract .new-extract__label {
-    margin-right: 1em;
-  }
-}
 /* - - - - - - - - - -> FOOTER <- - - - - - - - - - */
 .footer {
   display: flex;
   justify-content: space-between;
   padding: 1em;
   background-color: rgba(35, 27, 27, 0.2);
-  margin-top: 2em;
 }
 .footer .footer__text span {
   color: #736B92;
@@ -300,7 +229,7 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   font-size: 16px;
   font-family: "Crimson Text", serif;
@@ -321,6 +250,18 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: red;
+}
+
+/* - - - - - - - - - -> Extracts counter <- - - - - - - - - - */
+.counter__div {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0.2em 0.5em;
+  font-size: 0.8em;
+  border: 1px solid #231b1b;
 }
 
 /* - - - - - - - - - -> Description <- - - - - - - - - - */
